@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandhya Krishnan | Senior Python Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7JWJJYW31N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-7JWJJYW31N');
+    </script>
+</head>
+<body>
+    <div class="background-elements">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <nav>
+        <div class="nav-content">
+            <div class="logo">SK</div>
+            <ul class="nav-links">
+                <li><a href="#about" data-i18n="nav_about">About</a></li>
+                <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+                <li><a href="#publications" data-i18n="nav_publications">Publications</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+                <li><button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme"><i class="fas fa-sun" style="margin-right: 8px;"></i> <span data-i18n="nav_theme">Theme</span></button></li>
+                <li class="lang-switch">
+                    <button id="lang-en" class="lang-btn active">EN</button>
+                    <span class="divider">|</span>
+                    <button id="lang-de" class="lang-btn">DE</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-content fade-in">
+                <h1 data-i18n="hero_hi">Hi, I'm <span class="highlight">Sandhya Krishnan</span></h1>
+                <h2 data-i18n="hero_title">Senior Python Developer | AI & LLM Systems (Agents, Automation) | Data Engineering | ML | Author</h2>
+                <p data-i18n="hero_desc">Building scalable data pipelines, advanced analytics systems, and high-fidelity machine learning models.</p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary" data-i18n="btn_work">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary" data-i18n="btn_contact">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-image fade-in">
+                <div class="profile-photo-container">
+                    <img src="Confident ARI in a futuristic setting.png" alt="Sandhya Krishnan" class="profile-photo">
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about section">
+            <div class="section-header fade-in">
+                <h2 data-i18n="about_title">About Me</h2>
+                <div class="line"></div>
+            </div>
+            <div class="about-grid fade-in">
+                <div class="about-text">
+                    <p data-i18n="about_p1">I have over <strong>14+ years</strong> of experience in software engineering, with the last <strong>4+ years</strong> specializing entirely in building scalable Python data pipelines, distributed systems, and advanced analytics architectures.</p>
+                    <p data-i18n="about_p2">I'm also the author of <em>"Python Coding for Kids (Ages 8-10)"</em>, combining my technical expertise with a passion for teaching and communication.</p>
+                </div>
+                <div class="skills-container">
+                    <h3 data-i18n="tech_stack">Tech Stack</h3>
+                    <div class="skills-tags">
+                        <span class="tag with-bg"><i class="fab fa-python"></i> Python</span>
+                        <span class="tag with-bg"><i class="fas fa-database"></i> SQL</span>
+                        <span class="tag with-bg"><i class="fas fa-table"></i> Pandas & Polars</span>
+                        <span class="tag with-bg"><i class="fas fa-brain"></i> Machine Learning</span>
+                        <span class="tag with-bg"><i class="fas fa-chart-line"></i> Time Series</span>
+                        <span class="tag with-bg"><i class="fas fa-bolt"></i> FastAPI</span>
+                        <span class="tag with-bg"><i class="fas fa-network-wired"></i> Distributed Systems</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects section">
+            <div class="section-header fade-in">
+                <h2 data-i18n="projects_title">Featured Projects</h2>
+                <div class="line"></div>
+            </div>
+            <div class="projects-grid">
+                
+                <div class="project-card glass fade-in with-bg">
+                    <div class="project-content">
+                        <div class="project-type" data-i18n="proj1_type">AI Engineering</div>
+                        <h3>Ari (AI Agent Dashboard)</h3>
+                        <p data-i18n="proj1_desc">An AI-powered agent dashboard designed as a unified command center to manage workflows, automate repetitive tasks, and reduce context switching across tools. Integrates LLMs (Ollama) and WhatsApp (Twilio).</p>
+                        <div class="project-tech">
+                            <span>Python</span><span>Ollama</span><span>Twilio</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/SandKrish/ari-ai-assistant" target="_blank" class="link-btn" data-i18n="btn_repo"><i class="fab fa-github"></i> View Repository</a>
+                            <a href="https://www.youtube.com/watch?v=wBGvAoHXNIw" target="_blank" class="link-btn" style="margin-left: 15px;" data-i18n="btn_demo"><i class="fab fa-youtube"></i> Watch Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass fade-in with-bg">
+                    <div class="project-content">
+                        <div class="project-type" data-i18n="proj_ai_recept_type">AI Engineering</div>
+                        <h3 data-i18n="proj_ai_recept_title">German AI Receptionist</h3>
+                        <p data-i18n="proj_ai_recept_desc">An AI Voice Receptionist built with FastAPI and Vapi to handle outbound calls, manage patient information, and automate appointment bookings using GPT-4o.</p>
+                        <div class="project-tech">
+                            <span>Python</span><span>FastAPI</span><span>Vapi</span><span>GPT-4o</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/SandKrish/German-AI-Receptionist/blob/main/README.md" target="_blank" class="link-btn" data-i18n="btn_repo"><i class="fab fa-github"></i> View Repository</a>
+                            <a href="https://youtube.com/shorts/uxl4FK3CSlw?feature=share" target="_blank" class="link-btn" style="margin-left: 15px;" data-i18n="btn_demo"><i class="fab fa-youtube"></i> Watch Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass fade-in with-bg">
+                    <div class="project-content">
+                        <div class="project-type" data-i18n="proj2_type">Data Visualization</div>
+                        <h3 data-i18n="proj2_title">Tableau Public Portfolio</h3>
+                        <p data-i18n="proj2_desc">A collection of high-fidelity, interactive dashboards including the viral "AI Evolution" visualization. Features advanced calculated fields, complex statistical modeling, and premium aesthetic design.</p>
+                        <div class="project-tech">
+                            <span>Tableau</span><span>Python Data Prep</span><span>Data Storytelling</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://public.tableau.com/app/profile/sandhya.krishnan8275" target="_blank" class="link-btn" data-i18n="btn_profile"><i class="fas fa-chart-pie"></i> View Profile</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass fade-in with-bg">
+                    <div class="project-content">
+                        <div class="project-type" data-i18n="proj3_type">Data Engineering</div>
+                        <h3 data-i18n="proj3_title">Python Excel Automation Engine</h3>
+                        <p data-i18n="proj3_desc">Enterprise-grade, professional automation framework for multi-sheet Excel ingestion, Pydantic-based data validation, and high-fidelity scientific visualizations using Seaborn and Matplotlib.</p>
+                        <div class="project-tech">
+                            <span>Python</span><span>Pydantic</span><span>Seaborn</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/SandKrish/python-automation-system" target="_blank" class="link-btn" data-i18n="btn_repo"><i class="fab fa-github"></i> View Repository</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass fade-in with-bg">
+                    <div class="project-content">
+                        <div class="project-type" data-i18n="proj4_type">Machine Learning</div>
+                        <h3 data-i18n="proj4_title">Time Series Forecasting System</h3>
+                        <p data-i18n="proj4_desc">Robust forecasting models for temporal data leveraging both classical statistical and modern Machine Learning approaches.</p>
+                        <div class="project-tech">
+                            <span>Python</span><span>ML</span><span>Stats</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/SandKrish/timeseries" target="_blank" class="link-btn" data-i18n="btn_repo"><i class="fab fa-github"></i> View Repository</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="publications" class="publications section">
+            <div class="section-header fade-in">
+                <h2 data-i18n="pub_title">Publications & Writing</h2>
+                <div class="line"></div>
+            </div>
+            <div class="pub-grid">
+                <div class="pub-card glass fade-in book-card with-bg">
+                    <div class="pub-icon"><i class="fas fa-book"></i></div>
+                    <h3>Python Coding for Kids</h3>
+                    <p class="subtitle" data-i18n="pub1_sub">Ages 8-10 | A Visual Step-by-Step Guide</p>
+                    <p data-i18n="pub1_desc">I wrote this book to make programming accessible and visual for younger audiences, teaching foundational concepts in a fun, engaging way.</p>
+                    <div style="display: flex; gap: 15px; justify-content: center; margin-top: 15px;">
+                        <a href="https://www.amazon.in/Python-Coding-Kids-Step-Step-ebook/dp/B0GNXBKC8W" target="_blank" class="link-btn" data-i18n="btn_amazon"><i class="fab fa-amazon"></i> View on Amazon</a>
+                        <a href="https://www.youtube.com/watch?v=Yjl-YnDJgeg" target="_blank" class="link-btn" data-i18n="btn_anim"><i class="fab fa-youtube"></i> Watch Animation</a>
+                    </div>
+                </div>
+                <div class="pub-card glass fade-in article-card with-bg">
+                    <div class="pub-icon"><i class="fab fa-medium"></i></div>
+                    <h3 data-i18n="pub2_title">Medium Articles</h3>
+                    <p data-i18n="pub2_desc">I frequently write about Python engineering, Data pipelines, Data quality systems, and Practical Machine Learning concepts.</p>
+                    <a href="https://sandhyakrishnan02.medium.com/" target="_blank" class="link-btn" data-i18n="btn_articles"><i class="fas fa-external-link-alt"></i> Read My Articles</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact section fade-in">
+            <div class="contact-card glass with-bg">
+                <h2 data-i18n="contact_title">Let's Connect</h2>
+                <p data-i18n="contact_desc">I'm always open to discussing data engineering, machine learning, or potential collaborations.</p>
+                <div class="social-links" style="flex-wrap: wrap;">
+                    <a href="mailto:sandhyakrishnan02@gmail.com" class="social-icon" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/sandhya-krishnan-40a20895/" target="_blank" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/SandKrish" target="_blank" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://public.tableau.com/app/profile/sandhya.krishnan8275" target="_blank" class="social-icon" title="Tableau"><i class="fas fa-chart-pie"></i></a>
+                    <a href="https://sandhyakrishnan02.medium.com/" target="_blank" class="social-icon" title="Medium"><i class="fab fa-medium-m"></i></a>
+                    <a href="https://stackoverflow.com/users/12939824/sandhya-krishnan" target="_blank" class="social-icon" title="Stack Overflow"><i class="fab fa-stack-overflow"></i></a>
+                    <a href="https://x.com/PythonDataStats" target="_blank" class="social-icon" title="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p data-i18n="footer">&copy; 2026 Sandhya Krishnan. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
