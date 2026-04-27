@@ -34,6 +34,45 @@ fadeElements.forEach(element => {
 
 // Trigger animations for elements already in view on load
 document.addEventListener('DOMContentLoaded', () => {
+    // 3D Tilt Effect for Book
+    const bookCover = document.querySelector('.book-cover');
+    const bookContainer = document.querySelector('.book-container');
+
+    if (bookContainer && bookCover) {
+        bookContainer.addEventListener('mousemove', (e) => {
+            if (window.innerWidth < 768) return; 
+
+            // If the book is opening/open, stop updating the tilt to prevent jitters
+            if (bookContainer.matches(':hover')) return;
+
+            const rect = bookContainer.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = (y - centerY) / 10;
+            const rotateY = (centerX - x) / 10;
+
+            // Ensure we remove any inline transform that might have been set previously
+            if (bookCover.style.transform) {
+                bookCover.style.transform = '';
+            }
+
+            bookCover.style.setProperty('--tiltX', `${rotateX}deg`);
+            bookCover.style.setProperty('--tiltY', `${rotateY}deg`);
+        });
+
+        bookContainer.addEventListener('mouseleave', () => {
+            bookCover.style.setProperty('--tiltX', `0deg`);
+            bookCover.style.setProperty('--tiltY', `0deg`);
+            // Also ensure transform is cleared here
+            bookCover.style.transform = '';
+        });
+    }
+
+    // Immediate check for elements in view
     setTimeout(() => {
         fadeElements.forEach(element => {
             const rect = element.getBoundingClientRect();

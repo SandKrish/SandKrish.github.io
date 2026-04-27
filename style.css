@@ -523,6 +523,136 @@ main {
     margin-bottom: 25px;
 }
 
+/* 3D Book Interactive Effect */
+.book-card-v2 {
+    padding: 20px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+}
+
+.book-container {
+    position: relative;
+    width: 280px;
+    height: 400px; /* Increased from 380px */
+    perspective: 1500px;
+}
+
+.book-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5; /* Increased z-index */
+    transform-origin: left;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    cursor: pointer;
+    border-radius: 4px 12px 12px 4px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+    /* Use variables for the interactive tilt, default to 0 */
+    --tiltX: 0deg;
+    --tiltY: 0deg;
+    transform: perspective(1500px) rotateX(var(--tiltX)) rotateY(var(--tiltY));
+    will-change: transform;
+}
+
+.book-cover-front, .book-cover-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: inherit;
+    overflow: hidden;
+}
+
+.book-cover-back {
+    transform: rotateY(180deg);
+    background: #1e293b; /* Fallback color */
+}
+
+.cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+/* Open state: Highest priority when hovering */
+.book-container:hover .book-cover {
+    transform: perspective(1500px) rotateY(-110deg) !important;
+}
+
+.book-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 25px; /* Slightly reduced padding */
+    background: var(--bg-secondary);
+    border-radius: 4px 12px 12px 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Changed from center to start */
+    text-align: left;
+    z-index: 1;
+    border: 1px solid var(--glass-border);
+    overflow-y: auto; /* Added for longer translations */
+}
+
+.book-content h3 {
+    font-size: 1.25rem; /* Reduced from 1.4rem */
+    margin-bottom: 6px;
+    background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.book-content .subtitle {
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+}
+
+.book-content p {
+    font-size: 0.9rem; /* Reduced from 0.95rem */
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.book-links {
+    display: flex;
+    gap: 12px;
+    margin-top: auto; /* Push links to bottom */
+}
+
+/* Custom scrollbar for book content */
+.book-content::-webkit-scrollbar {
+    width: 4px;
+}
+.book-content::-webkit-scrollbar-thumb {
+    background: var(--accent-primary);
+    border-radius: 10px;
+}
+
+/* Add a spine effect to the front cover */
+.book-cover-front::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: inset 2px 0 5px rgba(255, 255, 255, 0.1);
+    border-radius: 4px 0 0 4px;
+}
+
 /* Contact Section */
 .contact-card {
     padding: 60px;
